@@ -12,7 +12,7 @@ There are a number of services residing on the controller. Among them, Network T
 
 The data plane consists of end hosts, software P4 switches (BMv2), and an Open vSwitch (OVS). Among them, the end hosts are responsible for (a) generating background traffic for training and testing, (b) generating INT probes for link status monitoring and (c) collecting/parsing INT probes and writing telemetry results into the database; the P4 switches forward the background traffic as well as the INT probes (we leverage the protocol-independent forwarding capability of the P4 switches to enable ECMP-like load balancing and customized processing of the INT probes); the OVS is used to reserve a separate communication channel between the controller and the data plane for safely passing control messages. In this way, the collected telemetry data can have a dedicated backhaul communication channel to the database. Actually, all the data plane components are controlled in an out-of-band mode to keep the critical control messages uninterrupted by the background traffic. For example, the controller speaks with BMv2 using Apache Thrift to enforce forwarding rules; the controller sends calculated INT probing paths to the end hosts and reads telemetry results from the database via sockets (all the end hosts are connected with OVS).
 
-# GUI
+# Demo GUI
 
 ![GUI of GreenTE.ai](https://github.com/graytower/greente_ai/blob/master/telemetry%2Bpowersaving.PNG)
 
