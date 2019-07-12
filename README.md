@@ -14,7 +14,7 @@ The data plane consists of end hosts, software P4 switches (BMv2), and an Open v
 
 # Demo GUI
 
-![GUI of GreenTE.ai](https://github.com/anonymous-1024/greente。ai/blob/master/telemetry%2Bpowersaving.PNG)
+![GUI of GreenTE.ai](https://github.com/anonymous-1024/greente.ai/blob/master/telemetry+powersaving.PNG?raw=true)
 
 # System
 
